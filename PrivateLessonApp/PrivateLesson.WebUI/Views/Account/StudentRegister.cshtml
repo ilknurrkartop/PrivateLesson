@@ -1,0 +1,93 @@
+﻿@model StudentRegisterViewModel
+<div class="container-fluid px-0 px-md-5 mb-5">
+    <div class="row align-items-center px-3">
+        <div class="col-lg-8 text-center text-lg-left">
+            <br />
+            <h1 class="display-6">Kayıt Ol</h1>
+            <hr />
+            <form asp-area="" asp-controller="Account" asp-action="StudentRegister" method="post" enctype="multipart/form-data">
+                <div class="row ">
+
+                    <div class="col-10">
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="FirstName"></label>
+                                <input class="form-control" asp-for="FirstName">
+                                <span class="text-danger" asp-validation-for="FirstName"></span>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="LastName"></label>
+                                <input class="form-control" asp-for="LastName">
+                                <span class="text-danger" asp-validation-for="LastName"></span>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="UserName"></label>
+                                <input class="form-control" asp-for="UserName">
+                                <span class="text-danger" asp-validation-for="UserName"></span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="Gender"></label>
+                                <input class="form-control" asp-for="Gender">
+                                <span class="text-danger" asp-validation-for="Gender"></span>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="DateOfBirth"></label>
+                                <input class="form-control" asp-for="DateOfBirth">
+                                <span class="text-danger" asp-validation-for="DateOfBirth"></span>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="City"></label>
+                                <input class="form-control" asp-for="City">
+                                <span class="text-danger" asp-validation-for="City"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="Phone"></label>
+                                <input class="form-control" asp-for="Phone">
+                                <span class="text-danger" asp-validation-for="Phone"></span>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="Email"></label>
+                                <input class="form-control" asp-for="Email">
+                                <span class="text-danger" asp-validation-for="Email"></span>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="Password"></label>
+                                <input class="form-control" asp-for="Password">
+                                <span class="text-danger" asp-validation-for="Password"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-4 mb-3">
+                                <label class="form-label" asp-for="RePassword"></label>
+                                <input class="form-control" asp-for="RePassword">
+                                <span class="text-danger" asp-validation-for="RePassword"></span>
+                            </div>
+                            <div class="col-8 mb-3">
+                                <label class="form-label" asp-for="Image"></label>
+                                <input type="file" asp-for="Image" class="form-control" accept="images/" multiple />
+                                <span class="text-danger" asp-validation-for="Image"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <button type="submit" class="btn btn-primary">Kaydol</button>
+            </form>
+
+        </div>
+        <div class="col-lg-4 text-center text-lg-right">
+            <img class="img-fluid mt-5" src="~/images/header.png" alt="" />
+        </div>
+    </div>
+</div>
+
+

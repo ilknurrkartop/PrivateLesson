@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+ <!-- Header Start -->
+<div>
+    @await Html.PartialAsync("_HeaderPartial")
+</div>
+<!-- Header End -->
+
+
+<!-- Facilities Start -->
+<div>
+    @await Html.PartialAsync("_FacilitiesPartial")
+</div>
+<!-- Facilities End -->
+
+<div class="container-fluid d-flex justify-content-center">
+    @await Component.InvokeAsync("Branches")
+</div>
+
+<!-- Team Start -->
+<div>
+    @await Html.PartialAsync("_TeamPartial")
+</div>
+<!-- Team End -->
+
+

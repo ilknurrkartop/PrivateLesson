@@ -1,0 +1,15 @@
+﻿@model StudentUpdateViewModel
+
+<div class="row">
+            <div class="col-4">
+                <form asp-area="Admin"
+              asp-controller="Students"
+              asp-action="DeleteImage"
+              asp-route-id="@Model.Image.Id"
+              method="post">
+                    <input type="hidden" name="teacherId" value="@Model.Id">
+                    <button type="submit" class="btn-close" aria-label="Close"></button>
+            <img src="~/images/@Model.Image.Url" class="img-thumbnail" alt="...">
+                </form>
+            </div>
+</div>

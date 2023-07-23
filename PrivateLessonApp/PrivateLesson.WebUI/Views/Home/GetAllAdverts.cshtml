@@ -1,0 +1,90 @@
+﻿@model AdvertListViewModel
+
+@{
+    List<AdvertViewModel> adverts = Model.Adverts;
+}
+
+
+@*<div class="container-xxl py-6">
+    <div class="container">
+        </div>
+        <div class="row g-4 justify-content-center">
+
+            @foreach (var advert in adverts)
+            {
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="courses-item d-flex flex-column bg-light overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">@advert.Price</div>
+                            <h5 class="mb-3">@advert.FirstName @advert.LastName</h5>
+                            <h3 class="mb-3">@advert.BranchName</h3>
+                            <p>@advert.Description</p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>@advert.Graduation</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>1 Saat</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative text-center mt-auto">
+                            <img class="" src="~/images/@advert.Image.Url">
+                            <div class="courses-overlay">
+                                <a asp-area=""
+                               asp-controller="Home"
+                               asp-action="AdvertDetails"
+                               asp-route-url=@advert.Url
+                                   class="btn btn-outline-primary border-2">
+                                    İncele
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div>
+</div>
+*@
+<div class="container-xxl py-6 mt-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h3 class="text-primary text-uppercase mb-2">İLANLAR</h3>
+            <h1 class="display-6 mb-4">
+                Alnında uzman en iyi öğretmeni bulun
+            </h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+
+            @foreach (var advert in adverts)
+            {
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="courses-item d-flex flex-column bg-light overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+
+                            <h4 class="mb-3 mt-4 text-black">@advert.FirstName @advert.LastName</h4>
+                            <h2 class="mb-3 text-warning">@advert.BranchName</h2>                            
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa-solid fa-school text-primary me-2"></i>@advert.Graduation</li>
+                                <li class="breadcrumb-item small"><i class="fa-regular fa-clock text-primary me-2"></i>1 Saat</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative text-center mt-auto">
+                            <img class="" src="~/images/@advert.Image.Url">
+                            <div class="courses-overlay mt-2">
+                                <a asp-area=""
+                               asp-controller="Home"
+                               asp-action="AdvertDetails"
+                               asp-route-url=@advert.Url
+                                   class="btn btn-primary border-2">
+                                    İncele
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div>
+</div>

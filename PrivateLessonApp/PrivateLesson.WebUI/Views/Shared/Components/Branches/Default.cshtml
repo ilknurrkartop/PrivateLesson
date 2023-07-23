@@ -1,0 +1,24 @@
+﻿@model List<BranchViewModel>
+
+@if (Model.Count() > 0)
+{
+    <div class="list-group list-group-horizontal d-flex align-items-center">
+        <a href="/"
+       class="list-group-item list-group-item-action @(ViewBag.SelectedBranchName == null ? "active" : "")">
+            Tüm Kategoriler
+        </a>
+        @foreach (var branch in Model)
+        {
+            <a asp-area=""
+       asp-controller="Home"
+       asp-action="Index"
+       asp-route-branchurl="@branch.Url"
+       class="list-group-item list-group-item-action @(ViewBag.SelectedBranchName==branch.Url ? "active" : "")">
+                @branch.BranchName
+            </a>
+        }
+    </div>
+}
+else{
+    @await Html.PartialAsync("_NoRecord","Branş")
+}

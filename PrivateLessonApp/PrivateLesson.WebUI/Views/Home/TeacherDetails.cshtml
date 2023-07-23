@@ -1,0 +1,118 @@
+﻿@*@model TeacherModel
+
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 pb-5">
+                    <img class="w-100" src="/images/@Model.ImageUrl" />
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <h2 class=" text-info">@Model.FirstName @Model.LastName</h2>
+            @for (int i = 0; i < Model.TeacherBranches.Count; i++)
+            {
+                <h5 class=" text-dark">Branş: @Model.TeacherBranches[i].BranchName @(i == Model.TeacherBranches.Count - 1 ? "" : " | ")</h5>
+            }
+            <div class="mt-2">
+                <span class="display-6 fs-6 fw-normal text-dark">Değerlendirme: </span>
+                @for (int i = 0; i < 5; i++)
+                {
+                    <span class="icon-star2 text-warning"></span>
+                }
+                <span class="display-6 fs-6 fw-normal text-dark">/ 4.8</span>
+            </div>
+            <h5 class="text-dark pt-3">Lisans: @Model.Graduation</h5>
+            <p class="mb-0 pt-2 text-dark">Açıklama:</p>
+            <p class="text-dark">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+        </div>
+
+    </div>
+</div>
+*@
+@model TeacherModel
+
+@*<div class="container pt-4">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 pb-3">
+                    <img class="w-100" src="/images/books/@Model.ImageUrl" />
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <h3 class="display-6 fs-4 fw-normal text-danger">@Model.FirstName @Model.LastName</h3>
+            @for (int i = 0; i < Model.TeacherBranches.Count; i++)
+            {
+                <span class="display-6 fs-6 fw-normal text-primary">@Model.TeacherBranches[i].BranchName @(i == Model.TeacherBranches.Count - 1 ? "" : " | ")</span>
+            }
+            <div class="mt-2">
+                @for (int i = 0; i < 5; i++)
+                {
+                    <i class="fa-regular fa-star text-success fa-xs"></i>
+                }
+            </div>
+            <h3 class="display-6 fs-4 fw-normal text-danger mt-2">Kitap Özeti</h3>
+            
+        </div>
+        <div class="col-4">
+            @*Fiyat Bölümü
+            <div class="border-1 border-warning border p-3 pb-0">
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center align-items-center">
+                       
+                    </div>
+                    <div class="col-6 text-center">
+                        <p class="fs-6 text-center">Tedarik süresi 3-5 gündür.</p>
+                        <form asp-area=""
+                              asp-controller="Cart"
+                              asp-action="AddToCart"
+                              method="post">
+                            <input type="hidden" asp-for="Id" />
+                            <button type="submit" class="btn btn-warning">Sepete Ekle</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="text-success mb-2 mt-2 fw-bold">300 TL üzeri kargo bedava!</p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+*@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 pb-5">
+                    <img class="w-100" src="/images/@Model.ImageUrl" />
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <h2 class=" text-info">@Model.FirstName @Model.LastName</h2>
+            @for (int i = 0; i < Model.TeacherBranches.Count; i++)
+            {
+                <h5 class=" text-dark">Branş: @Model.TeacherBranches[i].BranchName @(i == Model.TeacherBranches.Count - 1 ? "" : " | ")</h5>
+            }
+            <div class="mt-2">
+                <span class="display-6 fs-6 fw-normal text-dark">Değerlendirme: </span>
+                @for (int i = 0; i < 5; i++)
+                {
+                    <span class="icon-star2 text-warning"></span>
+                }
+                <span class="display-6 fs-6 fw-normal text-dark">/ 4.8</span>
+            </div>
+            <h5 class="text-dark pt-3">Lisans: @Model.Graduation</h5>
+            <p class="mb-0 pt-2 text-dark">Açıklama:</p>
+            <p class="text-dark">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+        </div>
+
+    </div>
+</div>
